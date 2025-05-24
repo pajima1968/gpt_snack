@@ -14,7 +14,6 @@
       "get": {
         "summary": "Listar treinos",
         "operationId": "listar_treinos",
-        "parameters": [],
         "responses": {
           "200": {
             "description": "Lista de treinos"
@@ -26,7 +25,6 @@
       "get": {
         "summary": "Listar alunos",
         "operationId": "listar_alunos",
-        "parameters": [],
         "responses": {
           "200": {
             "description": "Lista de alunos"
@@ -36,9 +34,8 @@
     },
     "/interacoes_treinador": {
       "get": {
-        "summary": "Listar interações do treinador",
+        "summary": "Listar interações",
         "operationId": "listar_interacoes",
-        "parameters": [],
         "responses": {
           "200": {
             "description": "Lista de interações"
@@ -75,6 +72,7 @@
     }
   },
   "components": {
+    "schemas": {},
     "securitySchemes": {
       "Authorization": {
         "type": "apiKey",
