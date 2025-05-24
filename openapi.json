@@ -1,12 +1,12 @@
 {
   "openapi": "3.1.0",
   "info": {
-    "title": "GPT Snack Training - Supabase API",
+    "title": "GPT Snack API via Supabase Edge Function",
     "version": "1.0.0"
   },
   "servers": [
     {
-      "url": "https://cxhsrvlktipvyphggpkk.supabase.co/rest/v1"
+      "url": "https://cxhsrvlktipvyphggpkk.functions.supabase.co/gpt-api"
     }
   ],
   "paths": {
@@ -16,18 +16,18 @@
         "operationId": "listar_treinos",
         "responses": {
           "200": {
-            "description": "Lista de treinos retornada"
+            "description": "Lista de treinos"
           }
         }
       }
     },
     "/alunos_oab": {
       "get": {
-        "summary": "Listar alunos cadastrados na OAB",
+        "summary": "Listar alunos",
         "operationId": "listar_alunos",
         "responses": {
           "200": {
-            "description": "Lista de alunos retornada"
+            "description": "Lista de alunos"
           }
         }
       }
@@ -38,7 +38,7 @@
         "operationId": "listar_interacoes",
         "responses": {
           "200": {
-            "description": "Lista de interações retornada"
+            "description": "Lista de interações"
           }
         }
       },
@@ -72,18 +72,6 @@
     }
   },
   "components": {
-    "schemas": {},
-    "securitySchemes": {
-      "Authorization": {
-        "type": "apiKey",
-        "in": "header",
-        "name": "Authorization"
-      }
-    }
-  },
-  "security": [
-    {
-      "Authorization": []
-    }
-  ]
+    "schemas": {}
+  }
 }
