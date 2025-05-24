@@ -1,0 +1,91 @@
+{
+  "openapi": "3.1.0",
+  "info": {
+    "title": "GPT Snack - Supabase API",
+    "version": "1.0.0"
+  },
+  "servers": [
+    {
+      "url": "https://cxhsrvlktipvyphggpkk.supabase.co/rest/v1"
+    }
+  ],
+  "paths": {
+    "/treino_ciclos": {
+      "get": {
+        "summary": "Listar treinos",
+        "operationId": "listar_treinos",
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "Lista de treinos"
+          }
+        }
+      }
+    },
+    "/alunos_oab": {
+      "get": {
+        "summary": "Listar alunos",
+        "operationId": "listar_alunos",
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "Lista de alunos"
+          }
+        }
+      }
+    },
+    "/interacoes_treinador": {
+      "get": {
+        "summary": "Listar interações do treinador",
+        "operationId": "listar_interacoes",
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "Lista de interações"
+          }
+        }
+      },
+      "post": {
+        "summary": "Inserir interação do treinador",
+        "operationId": "inserir_interacao",
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "data": { "type": "string", "format": "date" },
+                  "horario": { "type": "string", "format": "time" },
+                  "nome_usuario": { "type": "string" },
+                  "mensagem_treinador": { "type": "string" },
+                  "treino": { "type": "string" }
+                },
+                "required": ["data", "horario", "nome_usuario", "mensagem_treinador"]
+              }
+            }
+          }
+        },
+        "responses": {
+          "201": {
+            "description": "Interação criada com sucesso"
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "securitySchemes": {
+      "Authorization": {
+        "type": "apiKey",
+        "in": "header",
+        "name": "Authorization"
+      }
+    }
+  },
+  "security": [
+    {
+      "Authorization": []
+    }
+  ]
+}
