@@ -1,7 +1,7 @@
 {
   "openapi": "3.1.0",
   "info": {
-    "title": "GPT Snack - Supabase API",
+    "title": "GPT Snack Training - Supabase API",
     "version": "1.0.0"
   },
   "servers": [
@@ -16,29 +16,29 @@
         "operationId": "listar_treinos",
         "responses": {
           "200": {
-            "description": "Lista de treinos"
+            "description": "Lista de treinos retornada"
           }
         }
       }
     },
     "/alunos_oab": {
       "get": {
-        "summary": "Listar alunos",
+        "summary": "Listar alunos cadastrados na OAB",
         "operationId": "listar_alunos",
         "responses": {
           "200": {
-            "description": "Lista de alunos"
+            "description": "Lista de alunos retornada"
           }
         }
       }
     },
     "/interacoes_treinador": {
       "get": {
-        "summary": "Listar interações",
+        "summary": "Listar interações do treinador",
         "operationId": "listar_interacoes",
         "responses": {
           "200": {
-            "description": "Lista de interações"
+            "description": "Lista de interações retornada"
           }
         }
       },
